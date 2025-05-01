@@ -4,13 +4,32 @@
 
 <div class="text-center">
     <h1 class="display-4">Examen De Progreso 1 Pablo Vargas</h1>
-    <p>Mi meme favorito<p>
-        <section class="image-section">
-            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiJtp_J8yHSQq6T8jwTmEqrsOBSVe9VvZZHg&s style="width: 700px; height: 700px;" alt="meme" />
-        </section>
-    <p>
-        <a class="btn btn-outline-success d-inline-flex align-items-center" asp-action="alert">
-            Acerca de mi
-        </a>
-    </p>
+    <p>Mi meme favorito</p>
+
+    <section class="image-section">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiJtp_J8yHSQq6T8jwTmEqrsOBSVe9VvZZHg&s"
+             style="width: 700px; height: 700px;"
+             alt="meme" />
+    </section>
+
+    <div class="container mt-5">
+        <input type="text" id="campoTexto" class="form-control form-control-lg mb-3" placeholder="Escribe algo aquí...">
+
+        <button type="button" class="btn btn-outline-success btn-lg" onclick="mostrarAlerta()">
+            Mostrar Alerta
+        </button>
+    </div>
 </div>
+
+<script>
+    function mostrarAlerta() {
+        const valorCampo = document.getElementById("campoTexto").value;
+
+        const nombre = "Pablo Vargas";
+        const curso = "5to semestre";
+        const hobbie = "Escuchar música";
+
+        alert(`Mi nombre es ${nombre}, mi curso es ${curso}, mi hobbie es ${hobbie} y el valor del campo de texto es: ${valorCampo}`);
+    }
+</script>
+
